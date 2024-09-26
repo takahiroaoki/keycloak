@@ -1,15 +1,21 @@
 version: '3.9'
 
 services:
+  debug:
+    build:
+      context: .
+      dockerfile: Containerfile
+    volumes:
+      - ..:/workspaces/keycloak
+    working_dir: /workspaces/keycloak
+    depends_on:
+      - keycloak
+    tty: true
   keycloak:
     image: quay.io/keycloak/keycloak:25.0.6
     environment:
       KEYCLOAK_ADMIN: admin
       KEYCLOAK_ADMIN_PASSWORD: password
-    volumes:
-      - ..:/workspaces/keycloak
-    working_dir: /workspaces/keycloak
     ports:
       - 8080:8080
-    command:
-      - start-dev
+    command: start-dev

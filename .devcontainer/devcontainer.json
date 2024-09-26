@@ -1,6 +1,13 @@
 {
 	"name": "keycloak",
 	"dockerComposeFile": "compose.yaml",
-	"service": "keycloak",
-	"workspaceFolder": "/workspaces/keycloak"
+	"service": "debug",
+	"workspaceFolder": "/workspaces/keycloak",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-azuretools.vscode-docker"
+			]
+		}
+	}
 }
