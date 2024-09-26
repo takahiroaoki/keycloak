@@ -2,13 +2,13 @@ version: '3.8'
 
 services:
   keycloak:
-    image: docker.io/keycloak/keycloak:25.0
+    image: quay.io/keycloak/keycloak:21.1.1
     environment:
       - KEYCLOAK_ADMIN=admin
       - KEYCLOAK_ADMIN_PASSWORD=password
     volumes:
-      - ..:/mnt/keycloak
-    working_dir: /mnt/keycloak
+      - ..:/workspaces/keycloak
+    working_dir: /workspaces/keycloak
     ports:
       - 8080:8080
-    command: /bin/sh
+    command: ["start-dev"]
