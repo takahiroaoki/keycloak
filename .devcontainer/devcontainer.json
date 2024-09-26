@@ -2,5 +2,5 @@
 	"name": "keycloak",
 	"dockerComposeFile": "compose.yaml",
 	"service": "keycloak",
-	"workspaceFolder": "/mnt/keycloak"
+	"workspaceFolder": "/workspaces/keycloak"
 }
