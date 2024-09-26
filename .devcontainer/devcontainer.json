@@ -1,6 +1,6 @@
 {
-  "name": "keycloak",
-  "dockerComposeFile": "compose.yaml",
-  "service": "keycloak",
+	"name": "keycloak",
+	"dockerComposeFile": "compose.yaml",
+	"service": "keycloak",
 	"workspaceFolder": "/mnt/keycloak"
 }
