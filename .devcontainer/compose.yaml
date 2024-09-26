@@ -11,4 +11,4 @@ services:
     working_dir: /mnt/keycloak
     ports:
       - 8080:8080
-    tty: true
+    command: /bin/sh
